@@ -34,6 +34,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCoordenada = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // OpenFile
@@ -42,19 +46,22 @@
             // 
             // btnSelectArchivo
             // 
+            this.btnSelectArchivo.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnSelectArchivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelectArchivo.ForeColor = System.Drawing.Color.White;
             this.btnSelectArchivo.Location = new System.Drawing.Point(40, 55);
-            this.btnSelectArchivo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSelectArchivo.Margin = new System.Windows.Forms.Padding(4);
             this.btnSelectArchivo.Name = "btnSelectArchivo";
             this.btnSelectArchivo.Size = new System.Drawing.Size(215, 74);
             this.btnSelectArchivo.TabIndex = 0;
             this.btnSelectArchivo.Text = "Seleccionar Archivo";
-            this.btnSelectArchivo.UseVisualStyleBackColor = true;
+            this.btnSelectArchivo.UseVisualStyleBackColor = false;
             this.btnSelectArchivo.Click += new System.EventHandler(this.btnSelectArchivo_Click);
             // 
             // txtResta
             // 
             this.txtResta.Location = new System.Drawing.Point(519, 60);
-            this.txtResta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtResta.Margin = new System.Windows.Forms.Padding(4);
             this.txtResta.Name = "txtResta";
             this.txtResta.Size = new System.Drawing.Size(132, 22);
             this.txtResta.TabIndex = 1;
@@ -82,24 +89,60 @@
             // txtCoordenada
             // 
             this.txtCoordenada.Location = new System.Drawing.Point(519, 112);
-            this.txtCoordenada.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCoordenada.Margin = new System.Windows.Forms.Padding(4);
             this.txtCoordenada.Name = "txtCoordenada";
             this.txtCoordenada.Size = new System.Drawing.Size(132, 22);
             this.txtCoordenada.TabIndex = 4;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CNC.Properties.Resources.ejemplo;
+            this.pictureBox1.InitialImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(447, 173);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(318, 353);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(242, 173);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(189, 17);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Ejemplo del archivo de texto.";
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(200, 245);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(231, 161);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Es importante que cada coordenada se especifique un número aunque sea 0 . Ejemplo" +
+    " \" Y0 \"";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LavenderBlush;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtCoordenada);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtResta);
             this.Controls.Add(this.btnSelectArchivo);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,6 +156,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCoordenada;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 
