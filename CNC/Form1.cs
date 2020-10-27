@@ -83,16 +83,17 @@ namespace CNC
                     }
                     catch (Exception ex)
                     {
-                        Console.WriteLine(ex.Message);
+                        MessageBox.Show("Algo a ido mal.");
                     }
 
                 }
-                var folderBrowserDialog1 = new FolderBrowserDialog();
+                var folderBrowserDialog1 = new SaveFileDialog();
+                folderBrowserDialog1.FileName = "cnc2";
+                folderBrowserDialog1.DefaultExt = "txt";
                 DialogResult result = folderBrowserDialog1.ShowDialog();
                 if (result == DialogResult.OK)
                 {
-                    string folderName = folderBrowserDialog1.SelectedPath;
-                    folderName += "/nc2.txt";
+                    string folderName = folderBrowserDialog1.FileName;
                     try
                     {
                         // Create the file, or overwrite if the file exists.
@@ -102,21 +103,12 @@ namespace CNC
                             // Add some information to the file.
                             fs.Write(info, 0, info.Length);
                         }
-
-                        // Open the stream and read it back.
-                        using (StreamReader sr = File.OpenText(folderName))
-                        {
-                            string s = "";
-                            while ((s = sr.ReadLine()) != null)
-                            {
-                                Console.WriteLine(s);
-                            }
-                        }
+                        MessageBox.Show("El archivo se ha generaso correctamente", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
 
                     catch (Exception ex)
                     {
-                        Console.WriteLine(ex.ToString());
+                        MessageBox.Show("Error al generar el archivo");
                     }
                 }
             }
